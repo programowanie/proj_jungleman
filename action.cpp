@@ -1,7 +1,6 @@
 #include "nature.h"
 #include "action.h"
-#include <stdio.h>
-#include <iostream>
+
 using namespace std;
 
 action::action(int i, string nam, int stats_ad[4],int chance_at[2])

@@ -20,6 +20,11 @@ void nature::set(int day,bool anoon,int place)
 	safe_place=place;
 }
 
+vector<action>* nature::set_jungle_response()
+{
+    return &jungle_response;
+}
+
 
 action* nature::random_nature_response()
 {

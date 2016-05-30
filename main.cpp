@@ -22,9 +22,9 @@ int main(int argc, char const *argv[])
 	string filename = argv[1];
 	
 	int basic_stats[]={k,k,k,k};
-	human Idler(basic_stats); //tworze czlowieka "Idler"
+	human Idler(basic_stats,0); //tworze czlowieka "Idler"
 	
-	get_me_some_action(&nature::jungle()->jungle_response,&Idler.human_action,filename); //-----------ładuje wektor akcji dla czlowieka i dla natury
+	get_me_some_action(nature::jungle()->set_jungle_response(),Idler.set_human_action(),filename); //-----------ładuje wektor akcji dla czlowieka i dla natury
 
 
 
@@ -44,15 +44,15 @@ for(int i=0;i<30;i++) //30 dni
 	
 
 			//robi cos rano
-			Idler.do_something(nature::jungle()->get_daytime(),&Idler.human_action[Idler.think(nature::jungle()->get_daytime(),nature::jungle()->get_afternoon())],nature::jungle()->get_safe_place(),nature::jungle()->random_nature_response());
+			Idler.do_something(nature::jungle()->get_daytime(),Idler.get_human_action( Idler.think(nature::jungle()->get_daytime(),nature::jungle()->get_afternoon()) ),nature::jungle()->get_safe_place(),nature::jungle()->random_nature_response());
 	
 
 	if(!Idler.check_status(k)) death_announcement(i,nature::jungle()->get_daytime(),nature::jungle()->get_killer(),Idler.last_action_name);
 
 
 
-			//i popoludniem (zwraca safe place jesli tkaie znajdzie)
-			nature::jungle()->set(1,1,Idler.do_something(nature::jungle()->get_daytime(),&Idler.human_action[Idler.think(nature::jungle()->get_daytime(),1)],nature::jungle()->get_safe_place(),nature::jungle()->random_nature_response()));
+			//i popoludniem (zwraca safe place jesli takie znajdzie)
+			nature::jungle()->set(1,1,Idler.do_something(nature::jungle()->get_daytime(),Idler.get_human_action(Idler.think(nature::jungle()->get_daytime(),1) ),nature::jungle()->get_safe_place(),nature::jungle()->random_nature_response()));
 			
 
 
@@ -67,13 +67,15 @@ for(int i=0;i<30;i++) //30 dni
 			Idler.organism(1);
 
 			//robi cos w nocy
-			Idler.do_something(nature::jungle()->get_daytime(),&Idler.human_action[Idler.think(nature::jungle()->get_daytime(),nature::jungle()->get_afternoon())],nature::jungle()->get_safe_place(),nature::jungle()->random_nature_response());
+			Idler.do_something(nature::jungle()->get_daytime(),Idler.get_human_action(Idler.think(nature::jungle()->get_daytime(),nature::jungle()->get_afternoon()) ),nature::jungle()->get_safe_place(),nature::jungle()->random_nature_response());
 			
 			
 
 	//staty na dobranoc
 	if(!Idler.check_status(k)) death_announcement(i,nature::jungle()->get_daytime(),nature::jungle()->get_killer(),Idler.last_action_name);
 	Idler.show_stats(i,nature::jungle()->get_daytime());
+
+	Idler.learn(1); //codziennie troche mądrzejszy
 
 	if(i==29)alive_announcement();
 }

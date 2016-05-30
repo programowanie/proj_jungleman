@@ -1,3 +1,3 @@
 all:
-	g++ *.cpp -std=c++0x -o jungleman
-	./jungleman jungle.csv 100
+	g++ *.cpp -std=c++0x -o proj_jungleman
+	./proj_jungleman jungle.csv 100

@@ -4,17 +4,20 @@
 4,nothing,0,0,0,0,80,40
 5,attacked by the tiger,-70,0,0,0,1,2
 6,bit by the snake,-20,0,0,0,2,15
-7,cooked by the natives,-100,0,0,0,1,0
-8,strangled by monkeys,-100,0,0,0,1,1
-9,swallowed by a hippopotamus,-100,0,0,0,1,0
+7,cought and cooked by the natives,-100,0,0,0,1,0
+8,almost strangled by monkeys,-80,0,0,0,1,1
+9,almost swallowed by a hippopotamus,-90,0,0,0,1,0
 10,drinking some dirty water,-10,-10,0,0,5,0
 11,robbed of food by the monkeys,0,0,-10,0,2,6
 12,touched by a poisonous lizard,-10,0,0,0,3,6
 13,bit by a giant spider,-15,0,0,0,3,15
 14,ambushed by the cannibals and had to run for his life,0,0,0,-30,1,0
-15,lucky to find some more coconuts,0,10,10,0,3,0
-16,lucky to find some more water,0,40,0,0,3,0
-17,eaten by the forfiter,-100,0,0,0,1,2
+15,poisoned by a strange frog,-10,0,0,0,4,8
+16,bit by an awful insect,-5,0,0,0,4,8
+17,eaten by the forfiter,-100,0,0,0,1,1
 18,attacked by the lion,-60,0,0,0,1,2
-19,lucky to find a crashed plane and some supplies inside,20,20,20,20,1,0
+19,surrounded by wild animals and had to climb the tree,0,0,0,-10,1,1
 20,hit by a falling coconut,-50,0,0,0,2,4
+100,lucky to find some more coconuts,0,10,10,0,3,0
+101,lucky to find some more water,0,40,0,0,3,0
+102,lucky to find a crashed plane and some supplies inside,20,20,20,20,1,0
