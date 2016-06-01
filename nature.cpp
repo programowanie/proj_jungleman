@@ -42,7 +42,7 @@ action* nature::random_nature_response()
 
 longaction nature::get_longaction(action* last) 
 {
-    string _type; //pobieram sobie typ statniej akcji najpierw czlowieka, potem natury
+    string _type; //pobieram sobie typ statniej akcji 
 
     _type=(*last).get_action_longterm_type();
 

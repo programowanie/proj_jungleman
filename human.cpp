@@ -92,11 +92,7 @@ bool human::do_something(int daytime, action* chosen_action,bool safeplace,actio
  	
  	//dlugotrwale zdarzenie?:
  	longterm_success_n=0;
- 	if((*nature_response).get_longterm_chance()!=0)
- 	{
- 		int fate3=rand() %100;
-	 	if ((fate3-(*nature_response).get_longterm_chance())<0) longterm_success_n=1; //efekty przyjdą później
- 	}
+ 	
  	
 
  	 	
@@ -110,6 +106,11 @@ bool human::do_something(int daytime, action* chosen_action,bool safeplace,actio
 				 	{
 					 	cout  << " But he was "<<(*nature_response).get_action_name()<<"!";
 						survival_skill++; //uczy sie czegos
+						if((*nature_response).get_longterm_chance()!=0)
+					 	{
+					 		int fate3=rand() %100;
+						 	if ((fate3-(*nature_response).get_longterm_chance())<0) longterm_success_n=1; //efekty przyjdą później
+					 	}
 					} 		
 				}
 		 	}
@@ -123,6 +124,11 @@ bool human::do_something(int daytime, action* chosen_action,bool safeplace,actio
 				 	{
 					 	cout  << " But he was "<<(*nature_response).get_action_name()<<"!";
 						survival_skill++; //uczy sie czegos
+						if((*nature_response).get_longterm_chance()!=0)
+					 	{
+					 		int fate3=rand() %100;
+						 	if ((fate3-(*nature_response).get_longterm_chance())<0) longterm_success_n=1; //efekty przyjdą później
+					 	}
 					}
 			 	}
 			 	if(positive_impact==1) 
@@ -133,6 +139,11 @@ bool human::do_something(int daytime, action* chosen_action,bool safeplace,actio
 				 	{
 					 	cout  << " But he was "<<(*nature_response).get_action_name()<<"!";
 						survival_skill++; //uczy sie czegos
+						if((*nature_response).get_longterm_chance()!=0)
+					 	{
+					 		int fate3=rand() %100;
+						 	if ((fate3-(*nature_response).get_longterm_chance())<0) longterm_success_n=1; //efekty przyjdą później
+					 	}
 					}
 			 	}
 
@@ -176,24 +187,24 @@ void human::longterm()
 
 		(*it).time_is_running_out(1);
 		}
-		else 
+		else if((*it).get_longaction_time()==0)
 		{
 			null_vector_names.push_back((*it).get_action_name());
 			(*it).time_is_running_out(1);
 		}
 	}
 
-	// for(int j=0;j<null_vector_names.size();j++) //sprzątam "wykorzystane" longakcje, żeby mógł się zarazić czymś na nowo.
-	// {
-	// 	for (vector<longaction>::iterator it = conditions.begin() ; it != conditions.end(); ++it)
-	// 	{
-	// 		if((*it).get_action_name()==null_vector_names[j])
-	// 		{
-	// 			conditions.erase(it);
-	// 			break;
-	// 		}
-	// 	}
-	// }null_vector_names.clear();
+	for(int j=0;j<null_vector_names.size();j++) //sprzątam "wykorzystane" longakcje, żeby mógł się zarazić czymś na nowo.
+	{
+		for (vector<longaction>::iterator it = conditions.begin() ; it != conditions.end(); ++it)
+		{
+			if((*it).get_action_name()==null_vector_names[j])
+			{
+				conditions.erase(it);
+				break;
+			}
+		}
+	}null_vector_names.clear();
 
 }
 

@@ -15,11 +15,11 @@ class action
 	string name;
 
 public:
-	action(int i, string nam, int stats_ad[4],int chance_at[2],string type,int chance_long)
+	action(int i, string nam, int stats_ad[4],int chance_at[2],string longtype,int chance_long)
 	{
 		id=i;
 		name=nam;
-		longterm_type=type;
+		longterm_type=longtype;
 		chance_of_longterm=chance_long;
 
 		for(int i=0;i<4;i++)stats_add[i]=stats_ad[i];

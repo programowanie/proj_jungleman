@@ -1,4 +1,4 @@
-1,looking for food and water,0,50,20,0,30,20,null,0
+1,looking for food and water,0,50,20,0,30,20,equipment,1
 2,looking for a safe place to sleep,0,0,0,0,40,0,null,0
 3,trying to sleep,0,0,0,20,70,90,null,0
 4,nothing,0,0,0,0,80,40,null,0
@@ -20,10 +20,11 @@
 20,hit by a falling coconut,-50,0,0,0,2,4,injury,40
 21,bitten by a swarm of mosquitos,-2,0,0,0,10,5,mosquito disease,80
 100,lucky to find some more coconuts,0,10,10,0,3,0,null,0
-101,lucky to find some more water,0,40,0,0,3,0,null,0
-102,lucky to find a crashed plane and some supplies inside,20,20,20,20,1,0,null,0
+101,lucky to find some more water,0,40,0,0,3,0,equipment,5
+102,lucky to find a crashed plane and some supplies inside,20,20,20,20,1,0,equipment,100
 200,unfortunate to catch a flu,-5,-5,-5,-5,5,4,null,0,disease,suffering from flu,4
 201,hardly poisoned,-10,0,0,0,10,3,null,0,poison,suffering from poison,3
-202,hardly damaged and is bleeding,-10,0,0,0,40,3,null,0,injury,bleeding,3
+202,hardly damaged and were bleeding,-10,0,0,0,40,3,null,0,injury,bleeding,3
 203,hardly damaged and propably broke something,-5,0,0,0,10,30,null,0,injury,feeling broke,30
 204,infected with malaria,-5,-5,-5,-5,5,10,null,0,mosquito disease,feeling malarial chills,10
+205,lucky to find a lot of supplies,5,5,5,5,5,7,null,0,equipment,using some of the extra supplies,7
