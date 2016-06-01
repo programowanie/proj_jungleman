@@ -4,6 +4,7 @@
 #include <string>
 #include <iostream>
 #include <vector>
+#include <ctime>
 using namespace std;
 
 class nature //singleton
@@ -17,6 +18,8 @@ class nature //singleton
 	int safe_place;
 	string killer;
 	vector<action> jungle_response;
+	vector<longaction> long_term_conditions;
+
 
 public:
 	static nature *jungle();
@@ -24,13 +27,21 @@ public:
 	action* random_nature_response(); 
 
 	void set(int day,bool anoon,int place);
-	vector<action>* set_jungle_response();
+	vector<action>* set_jungle_response() {return &jungle_response;}
+	vector<longaction>* set_long_term_conditions() {return &long_term_conditions;}
 
 	int get_daytime() {return daytime;}
 	bool get_afternoon() {return afternoon;}
+
 	int get_safe_place() {return safe_place;}
+
+	
+
 	string get_killer() {return killer;}
+	longaction get_longaction(action* last);
+
 };
+
 
 
 

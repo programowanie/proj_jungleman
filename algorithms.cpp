@@ -35,23 +35,33 @@ void alive_announcement()
 
 	printf("\n-----------------ANNOUNCEMENT------------------\n");
 	printf("I.D. Ler has survived in the jungle for 30 days.\n");
-	printf("He was rescued by a group of natives.\n-----------------------------------------------\n");
+	printf("He was finally rescued by a rescue crew.\n-----------------------------------------------\n");
 	
 }
 
 
-void get_me_some_action(vector<action>*vectorOfActions1,vector<action>*vectorOfActions2,string filename)
+void get_me_some_action(vector<action>*NATURE,vector<action>*HUMAN,vector<longaction>*Longterm,string filename)
 {
+	/* Akcje 1,2,3 =akcje czlowieka
+		<4,99> =reakcje "złe"
+		<100,199> =reakcje "dobre"
+		200+ =długotrwałe */
 	ifstream file;
 	file.open(filename);
 
 	if( file.good())
 	{  	
 		int id;
+		int long_chance;
 		string name;
+		string long_type;
 		
 		int stats_add[4];
 		int chance_at_daytime[2];
+
+		string name2;
+		string type;
+		int atime;
 
 		string phrase;
 		string row;
@@ -77,11 +87,26 @@ void get_me_some_action(vector<action>*vectorOfActions1,vector<action>*vectorOfA
 	            	getline( line, phrase, ',' );
 	           		chance_at_daytime[i]=atoi(phrase.c_str());
 	        	}
-	         
-	        if(id<4)(*vectorOfActions2).push_back(action(id,name,stats_add,chance_at_daytime));	  
-	        else (*vectorOfActions1).push_back(action(id,name,stats_add,chance_at_daytime));
-        }if(id<4)(*vectorOfActions2).pop_back();
-         else (*vectorOfActions1).pop_back();
+	        	getline( line, long_type, ',' );
+
+	        	getline( line, phrase, ',' );
+	            long_chance=atoi(phrase.c_str());
+
+	            if(id>=200)
+	            {
+	            	getline( line, type, ',' );
+	            	getline( line, name2, ',' );
+
+	            	getline( line, phrase, ',' );
+	           		atime=atoi(phrase.c_str());
+	            }
+	            
+
+	        if(id<4)(*HUMAN).push_back(action(id,name,stats_add,chance_at_daytime,long_type,long_chance));	  
+	        else if(id<200)(*NATURE).push_back(action(id,name,stats_add,chance_at_daytime,long_type,long_chance));
+	        else (*Longterm).push_back(longaction(id,name,stats_add,chance_at_daytime,long_type,long_chance,name2,type,atime));
+        }if(id<4)(*HUMAN).pop_back();
+        else if(id<200) (*NATURE).pop_back();
 
 	file.close();
 	} else cout << "file access denied!" << endl;

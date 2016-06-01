@@ -8,16 +8,6 @@ human::human(int construct_stats[4], int skill)
 	survival_skill=skill;
 } 
 
-vector<action>* human::set_human_action()
-{
-	return &human_action;
-}
-
-action* human::get_human_action(int i)
-{
-	return &human_action[i];
-}
-
 void human::show_stats(int i,int daytime)
 {
 	if (i==0&&daytime==1)printf("|Day | daytime |  HP | Hydrated | Stuffed |  Rested | Skill |\n");
@@ -63,6 +53,8 @@ bool human::check_status(int k)
 
 bool human::do_something(int daytime, action* chosen_action,bool safeplace,action* nature_response)
 {
+	last_nature_response=nature_response;
+	last_human_action=chosen_action;
 
 	//-----------------------------działanie czlowieka--------------------------
 
@@ -82,17 +74,35 @@ bool human::do_something(int daytime, action* chosen_action,bool safeplace,actio
  	if(success==1)cout<<" and he succeeded.";
  	else cout<<" but he failed.";
 
+ 	//dlugotrwale zdarzenie?:
+ 	longterm_success_h=0;
+	if(success==1)	
+	{
+	 	if((*chosen_action).get_longterm_chance()!=0)
+	 	{
+	 		int fate2=rand() %100;
+		 	if ((fate2-(*chosen_action).get_longterm_chance())<0) longterm_success_h=1; //efekty przyjdą później
+	 	}
+	}
  	
- 	//-------------------------------odzpowiedź natury---------------------------
+ 	//-------------------------------odpowiedź natury---------------------------
  	int avoid_killers=rand() % 100;
- 	bool positive_impact=0; //czy zdarzenie losowe jest dobre, czy nie? dobre mają numery 100+
- 	if((*chosen_action).get_action_id()>=100) positive_impact=1;
-
+ 	bool positive_impact=0; //czy zdarzenie losowe jest dobre, czy nie? dobre mają numery 100-199
+ 	if((*nature_response).get_action_id()>=100 && (*nature_response).get_action_id()<200) positive_impact=1;
+ 	
+ 	//dlugotrwale zdarzenie?:
+ 	longterm_success_n=0;
+ 	if((*nature_response).get_longterm_chance()!=0)
+ 	{
+ 		int fate3=rand() %100;
+	 	if ((fate3-(*nature_response).get_longterm_chance())<0) longterm_success_n=1; //efekty przyjdą później
+ 	}
+ 	
 
  	 	
-			if((*chosen_action).get_action_name()=="trying to sleep"&&safeplace==0) //bo podczas snu w bezpiecznym miejscu nie ma zagrozen,
+			if((*chosen_action).get_action_name()=="trying to sleep"&& safeplace==0) //bo podczas snu w bezpiecznym miejscu nie ma zagrozen,
 		 	{
-			 	if(avoid_killers>80&&positive_impact==0) //podczas snu wystepuje o 80% mniej zdarzen losowych(bo go nie widać!) i jesli juz, to same złe
+			 	if(avoid_killers>80 &&positive_impact==0) //podczas snu wystepuje o 80% mniej zdarzen losowych(bo go nie widać!) i jesli juz, to same złe
 		 		{	
 				 	for(int i=0;i<4;i++)
 				 	stats[i]+=(*nature_response).get_action_stat_single(i);	//odpowiedź natury
@@ -105,7 +115,7 @@ bool human::do_something(int daytime, action* chosen_action,bool safeplace,actio
 		 	}
 		 	if((*chosen_action).get_action_name()!="trying to sleep")
 			{ 	
-				if(avoid_killers>survival_skill&&positive_impact==0) //im jest sprytniejszy, tym wieksza ma szanse na unikniecie zagrozen
+				if( avoid_killers>survival_skill &&positive_impact==0) //im jest sprytniejszy, tym wieksza ma szanse na unikniecie zagrozen
 			 	{
 			 		for(int i=0;i<4;i++)
 				 	stats[i]+=(*nature_response).get_action_stat_single(i);	//odpowiedź natury
@@ -131,10 +141,62 @@ bool human::do_something(int daytime, action* chosen_action,bool safeplace,actio
 	//--------------------------------------------------------------------------------
 	
 
- 	last_action_name=(*chosen_action).get_action_name();
+ 	
  	if((success==1)&&((*chosen_action).get_action_name()=="looking for a safe place to sleep"))return success;
  	else return 0;
 }
+
+void human::effect_cause(longaction long_action)
+{
+	bool duplicate=0;
+	for (vector<longaction>::iterator it = conditions.begin() ; it != conditions.end(); ++it) //żeby nie zapadł dwa razy na tę samą chorobę itd.
+	{
+		if((*it).get_action_name()==long_action.get_action_name()) duplicate=1;
+	}
+
+	if(!duplicate)conditions.push_back(long_action);
+}
+
+void human::longterm()
+{
+	vector<string>null_vector_names;
+	for (vector<longaction>::iterator it = conditions.begin() ; it != conditions.end(); ++it)
+	{
+		if((*it).get_longterm_base_time()==(*it).get_longaction_time()) //jezeli to jest pierwsze wywołanie danej longakcji
+		{
+			cout << "This day, he also was "<<(*it).get_action_name() <<"."<<endl;
+
+		(*it).time_is_running_out(1);
+		}
+		else if((*it).get_longaction_time()!=0) //jeżeli któreś z kolei wywołanie danej longakcji
+		{
+			cout << "He was also "<< (*it).get_longaction_name2() <<"."<<endl;
+			for(int i=0;i<4;i++)
+			stats[i]+=(*it).get_action_stat_single(i);
+
+		(*it).time_is_running_out(1);
+		}
+		else 
+		{
+			null_vector_names.push_back((*it).get_action_name());
+			(*it).time_is_running_out(1);
+		}
+	}
+
+	// for(int j=0;j<null_vector_names.size();j++) //sprzątam "wykorzystane" longakcje, żeby mógł się zarazić czymś na nowo.
+	// {
+	// 	for (vector<longaction>::iterator it = conditions.begin() ; it != conditions.end(); ++it)
+	// 	{
+	// 		if((*it).get_action_name()==null_vector_names[j])
+	// 		{
+	// 			conditions.erase(it);
+	// 			break;
+	// 		}
+	// 	}
+	// }null_vector_names.clear();
+
+}
+
 
 
 
