@@ -19,9 +19,9 @@ Program wyświetla podsumowania codziennego zmagania mieszczucha z przyrodą wra
 dodano:
 
 - survival skill zwiększa szansę na uniknięcie negatywnych zdarzeń i powodzenie akcji człowieka. Rośnie codziennie i z każdym zdarzeniem o +1.
-- akcje długoterminowe określonego typu, które mają określoną szansę wystąpić podczas zwykłych akcji. Trwają określoną ilość dni. W pierwszym dniu występuje komunikat informujący o rozpocząciu, w kolejnych komunikat o tym, że akcja jest aktywna + jej skutki. Akcji długoterminowych jednego typu (np. choroba) moze być więcej, niektóre wystąpią częściej od innych zgodnie z zadanym parametrem.
-- nie może jednocześnie mieć dwóch takich samych akcji długoterminowych, ale kiedy dana akcja się skończy może znów "wylosować" tę samą.
-- podczas snu występuje tylko 20% zagrożeń.
+- akcje długoterminowe określonego typu, które mają szansę wystąpić podczas zwykłych akcji. Trwają określoną ilość dni. W pierwszym dniu występuje komunikat informujący o rozpocząciu, w kolejnych komunikat o tym, że akcja jest aktywna + nastęþuje aktywacja jej skutków. Akcji długoterminowych jednego typu (np. choroba) moze być więcej, niektóre wystąpią częściej od innych zgodnie z zadanym parametrem.
+- człowiek nie może jednocześnie mieć dwóch takich samych akcji długoterminowych, ale kiedy dana akcja się skończy może znów "wylosować" tę samą.
+- podczas snu występuje tylko 20% zagrożeń (bardziej naturalna symulacja).
 
 
 
