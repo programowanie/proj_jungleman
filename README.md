@@ -16,16 +16,13 @@ Mogące wystąpić z odpowiednim prawdopodobieństwem w zależności od akcji mi
 Program wyświetla podsumowania codziennego zmagania mieszczucha z przyrodą wraz z informacją czy udało mu się przeżyć. Może zostać potem rozbudowany np. o więcej osób i możliwość współpracy między nimi lub zdolność mieszczucha do podejmowania coraz lepszych decyzji bazując na posiadanej umiejętności _survival_ zwiększanej proporcjonalnie do okresu pobytu mieszczucha w dżungli.
 
 -------------------------------------------------
-Instrukcja do pliku csv:
-- pierwsze 3 akcje są zarezerwowane jako akcje człowieka.
-- wiersze <4,99> są zarezerwowane na "negatywne dla człowieka" reakcje natury.
-- wiersze <100, 199> są zarezerwowane na "pozytywne dla człowieka" reakcje.
-- wiersze <200+) są akcjami DŁUGOTERMINOWYMI, mającymi skutki w przyszłości, mogą się one pojawić jako dodatek do akcji/reakcji.
- 
-AKCJA składa się z:
+dodano:
 
- (id),(nazwa),(wpływ na zdrowie),(wpływ na napojenie),(wpływ na sytość),(wpływ na wypoczęcie),(szansa wystąpienia w dzień),(szansa wystąpienia w nocy),(typ możliwej akcji długoterminowej),(szansa na akcję długoterminową)
+- survival skill zwiększa szansę na uniknięcie negatywnych zdarzeń i powodzenie akcji człowieka. Rośnie codziennie i z każdym zdarzeniem o +1.
+- akcje długoterminowe określonego typu, które mają określoną szansę wystąpić podczas zwykłych akcji. Trwają określoną ilość dni. W pierwszym dniu występuje komunikat informujący o rozpocząciu, w kolejnych komunikat o tym, że akcja jest aktywna + jej skutki. Akcji długoterminowych jednego typu (np. choroba) moze być więcej, niektóre wystąpią częściej od innych zgodnie z zadanym parametrem.
+- nie może jednocześnie mieć dwóch takich samych akcji długoterminowych, ale kiedy dana akcja się skończy może znów "wylosować" tę samą.
+- podczas snu występuje tylko 20% zagrożeń.
 
-AKCJA DŁUGOTERMINOWA składa się z:
 
- (id),(komunikat1),(wpływ na zdrowie),(wpływ na napojenie),(wpływ na sytość),(wpływ na wypoczęcie),(szansa wystąpienia),(podstawowa długość trwania),(typ możliwej kolejnej akcji długoterminowej),(szansa na akcję długoterminową),(typ),(komunikat2),(kolejne dni trwania)
+
+

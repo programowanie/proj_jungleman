@@ -1,0 +1,25 @@
+200,unfortunate to catch the flu,-5,-5,-5,-5,50,4,null,0,disease,suffering from flu,4
+201,hardly poisoned,-20,0,0,0,10,3,null,0,poison,suffering from poison,3
+202,hardly damaged and was bleeding,-10,0,0,0,40,3,null,0,injury,bleeding,3
+203,hardly damaged and propably broke something,-5,0,0,0,10,30,null,0,injury,feeling broke,30
+204,infected with malaria,-7,-5,-5,-5,30,10,null,0,mosquito disease,feeling malarial chills,10
+205,lucky to find a lot of supplies,5,5,5,5,5,7,null,0,equipment,using some of the extra supplies,7
+206,feeling dizzy and propably got indigestion,-5,-10,-10,-10,5,3,null,0,disease,feeling indigest,3
+207,poisoned enough to feel bad,-5,0,0,0,30,3,null,0,poison,suffering from a medium poison,3
+208,poisoned a bit,-2,0,0,0,60,3,null,0,poison,still feeling a bit dizzy,3
+209,infected with some strange tropical disease,-3,-1,-1,-1,70,5,null,0,mosquito disease,having a fever,5
+210,hardly wounded,-5,0,0,-5,30,5,null,0,injury,feeling that his skin is torn,5
+211,injured,-5,0,0,-5,30,3,null,0,injury,feeling pain from his contusion,3
+212,unfortunate to have his joint twisted,-5,0,0,-10,30,5,null,0,injury,feeling pain from his joint,5
+213,unfortunate to sprain his ankle,-5,0,0,-10,30,5,null,0,injury,having his bruised ankle swelling,5
+214,unfortunate to catch the joint disease,-1,0,0,-15,20,4,null,0,disease,swelling becouse of joint disease,4
+215,unfortunate to catch the muscle disease,-5,0,0,-10,20,3,null,0,disease,feeling pain becouse of his muscle stiffness,3
+216,infected with plague,-20,-5,-5,-50,1,30,null,0,mosquito disease,feeling high fever and muscle cramps,30
+217,having an allergic reaction to something,-5,0,0,-5,20,3,null,0,disease,suffering from allergic reaction,3
+218,lucky to find a bottle of wine,-5,0,0,5,5,2,null,0,equipment,having a hangover,2
+219,so scared that he panicked,0,0,0,-60,100,2,null,0,panic,feeling hopeless,2
+220,feeling hopeful and upbeat,0,0,0,30,100,2,null,0,hope,in a positive mood,2
+221,lucky to find a rusty machette,0,0,0,25,5,5,null,0,equipment,conserving strength trying to use machette until it collapses,5
+222,lucky to find some medicine,10,0,0,0,5,5,null,0,equipment,using his medicine,5
+223,lucky to find some preserve cans,0,0,10,0,10,7,null,0,equipment,eating a preserve can,7
+224,lucky to find some bottles of water,0,10,0,0,10,3,null,0,,equipment,drinking his water from bottles,3

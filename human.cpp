@@ -24,8 +24,8 @@ void human::organism(int n)
 {
 	if(n==0) //w czasie dnia
 	{
-		stats[2]-=10; //hungry
-		stats[1]-=25; //thirsty
+		stats[2]-=15; //hungry
+		stats[1]-=32; //thirsty
 	}
 	else	//w nocy
 	{

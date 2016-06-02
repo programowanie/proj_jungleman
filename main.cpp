@@ -8,7 +8,6 @@
 #include <fstream>
 #include <sstream>
 #include <ctime>
-#include <algorithm>
 using namespace std;
 
 void death_announcement(int day,int daytime,string killer,string action);
@@ -19,14 +18,15 @@ int main(int argc, char const *argv[])
 {
 	srand( time( NULL ) );
 
-	int k = atoi(argv[2]);
-	string filename = argv[1];
+	int k = atoi(argv[3]);
+	string filename1 = argv[1];
+	string filename2 = argv[2];
 	
 	int basic_stats[]={k,k,k,k};
 	human Idler(basic_stats,0); //tworze czlowieka "Idler"
 	
-	get_me_some_action(nature::jungle()->set_jungle_response(),Idler.set_human_action(),nature::jungle()->set_long_term_conditions(),filename); //-----------ładuje wektor akcji dla czlowieka i dla natury
-
+	get_me_some_action(nature::jungle()->set_jungle_response(),Idler.set_human_action(),nature::jungle()->set_long_term_conditions(),filename1); //-----------ładuje wektor akcji dla czlowieka i dla natury
+	get_me_some_action(nature::jungle()->set_jungle_response(),Idler.set_human_action(),nature::jungle()->set_long_term_conditions(),filename2); //-----------ładuje wektor longakcji
 
 
 
@@ -74,7 +74,7 @@ for(int i=0;i<30;i++) //30 dni
 			Idler.do_something(nature::jungle()->get_daytime(),Idler.get_human_action(Idler.think(nature::jungle()->get_daytime(),nature::jungle()->get_afternoon()) ),nature::jungle()->get_safe_place(),nature::jungle()->random_nature_response());
 			if(Idler.get_longterm_success_h()) Idler.effect_cause(nature::jungle()->get_longaction(Idler.get_last_human_action()));
 			if(Idler.get_longterm_success_n()) Idler.effect_cause(nature::jungle()->get_longaction(Idler.get_last_nature_response()));
-			Idler.longterm();
+			Idler.longterm(); //sprawdza co tam sobie siedzi w wektorze longakcji
 
 	//staty na dobranoc
 	if(!Idler.check_status(k)) death_announcement(i,nature::jungle()->get_daytime(),nature::jungle()->get_killer(),Idler.get_last_human_action()->get_action_name());

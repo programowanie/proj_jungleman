@@ -8,7 +8,6 @@ nature *nature::jungl = 0;
 nature *nature::jungle()
 {
   if (!jungl)  jungl = new nature();
-   
   return jungl;
 }
 
@@ -43,11 +42,9 @@ action* nature::random_nature_response()
 longaction nature::get_longaction(action* last) 
 {
     string _type; //pobieram sobie typ statniej akcji 
-
     _type=(*last).get_action_longterm_type();
 
     vector<longaction*>longactionsOfSpecyficType;
-
     for (vector<longaction>::iterator it = long_term_conditions.begin() ; it != long_term_conditions.end(); ++it)
     {
         if((*it).get_longaction_type()==_type)
@@ -69,7 +66,6 @@ longaction nature::get_longaction(action* last)
         sum+=longactionsOfSpecyficType[i]->get_action_chance_single(0);
         if(sum>=rand_max-fate) break;
     }
-    //-----
 
     longaction to_return=*longactionsOfSpecyficType[i];
     longactionsOfSpecyficType.clear();

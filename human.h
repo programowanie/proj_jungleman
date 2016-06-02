@@ -11,7 +11,7 @@ class human{
 	int survival_skill;	//z kazdym dniem i z każdą przeżytą reakcją dzungli łatwiej mu zakonczyc sukcesem swoje akcje i uniknąć złych zdarzen
 	vector<action> human_action;
 
-	vector<longaction> conditions;
+	vector<longaction> conditions; //aktualne długotrwałe efekty działające na cżłowieka
 
 
 	bool longterm_success_h; //te zmienne traktuje jako "pamięć"" mojego cżłowieka, bo przecież wie co mu sie przytrafiło ostatnio

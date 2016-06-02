@@ -35,7 +35,6 @@ public:
 
 	int get_safe_place() {return safe_place;}
 
-	
 
 	string get_killer() {return killer;}
 	longaction get_longaction(action* last);

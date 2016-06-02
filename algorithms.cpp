@@ -31,8 +31,6 @@ void death_announcement(int day, int daytime, string killername, string action)
 
 void alive_announcement()
 {	
-	
-
 	printf("\n-----------------ANNOUNCEMENT------------------\n");
 	printf("I.D. Ler has survived in the jungle for 30 days.\n");
 	printf("He was finally rescued by a rescue crew.\n-----------------------------------------------\n");
