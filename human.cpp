@@ -1,6 +1,9 @@
 #include "human.h"
 #include "action.h"
-
+#include <unistd.h>
+   /*! \file human.cpp
+    \brief Plik zawierający metody z klasy Człowiek.
+*/
 
 human::human(int construct_stats[4], int skill)
 {
@@ -10,13 +13,32 @@ human::human(int construct_stats[4], int skill)
 
 void human::show_stats(int i,int daytime)
 {
-	if (i==0&&daytime==1)printf("|Day | daytime |  HP | Hydrated | Stuffed |  Rested | Skill |\n");
+	if (i==0&&daytime==1)printf("\n|Day | daytime |  HP | Hydrated | Satiated | Rested  | Skill |\n");
 	string _time;
 	daytime==1?_time="morning":_time="evening";
 	
-	if(daytime==1)cout <<"-------------------------------------------------------------"<<endl;
-	printf("| %2d | %s | %3d |  %4d    |  %3d    |  %4d   |  %3d  |\n",i+1,_time.c_str(),stats[0],stats[1],stats[2],stats[3],survival_skill);
-	if(daytime==2)cout <<"-------------------------------------------------------------"<<endl<<endl;
+	if(daytime==1)
+	{
+		for(int i=0;i<62;i++)
+		{
+			printf("-");
+			usleep(7000);
+			cout.flush();
+		}cout<<endl;
+	}
+
+	printf("| %2d | %s | %3d |  %4d    |   %3d    |  %4d   |  %3d  |\n",i+1,_time.c_str(),stats[0],stats[1],stats[2],stats[3],survival_skill);
+
+	if(daytime==2)
+	{
+		for(int i=0;i<62;i++)
+		{
+			printf("-");
+			usleep(7000);
+			cout.flush();
+		}cout << endl<<endl;
+	}
+	
 }
 
 
@@ -192,6 +214,7 @@ void human::longterm()
 			null_vector_names.push_back((*it).get_action_name());
 			(*it).time_is_running_out(1);
 		}
+		usleep(100000);
 	}
 
 	for(int j=0;j<null_vector_names.size();j++) //sprzątam "wykorzystane" longakcje, żeby mógł się zarazić czymś na nowo.

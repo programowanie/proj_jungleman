@@ -1,6 +1,8 @@
 #include "nature.h"
 #include "action.h"
-
+       /*! \file nature.cpp
+    \brief Plik zawierający metody z klasy Natura.
+*/
 
 nature *nature::jungl = 0;
 

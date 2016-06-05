@@ -1,3 +1,6 @@
+       /*! \file algorithms.cpp
+    \brief Plik zawierający funkcje poboczne, wykorzystywane w pliku main.cpp.
+*/
 #include "human.h"
 #include "action.h"
 #include "nature.h"
@@ -8,6 +11,7 @@
 #include <fstream>
 #include <sstream>
 #include <ctime>
+#include <unistd.h>
 using namespace std;
 
 void death_announcement(int day, int daytime, string killername, string action)
@@ -21,7 +25,7 @@ void death_announcement(int day, int daytime, string killername, string action)
 	else end="th";
 
 	if(killername=="nothing") killername="killed by his own apathy and weakness";
-
+	usleep(3000000);
 
 	printf("\n----------DEATH ANNOUNCEMENT-----------\n");
 	printf("I.D. Ler died horribly in the %s\non the %d%s day of his tragic journey.\n",_time.c_str(),day+1,end.c_str());
