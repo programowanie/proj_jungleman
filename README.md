@@ -17,6 +17,7 @@ Program wyświetla podsumowania codziennego zmagania mieszczucha z przyrodą wra
 
 -------------------------------------------------
 dodano:
+# Dokumentacja doxygen
 
 - survival skill zwiększa szansę na uniknięcie negatywnych zdarzeń i powodzenie akcji człowieka. Rośnie codziennie i z każdym zdarzeniem o +1.
 - akcje długoterminowe określonego typu, które mają szansę wystąpić podczas zwykłych akcji. Trwają określoną ilość dni. W pierwszym dniu występuje komunikat informujący o rozpocząciu, w kolejnych komunikat o tym, że akcja jest aktywna + nastęþuje aktywacja jej skutków. Akcji długoterminowych jednego typu (np. choroba) moze być więcej, niektóre wystąpią częściej od innych zgodnie z zadanym parametrem.
