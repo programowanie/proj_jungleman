@@ -34,6 +34,7 @@ public:
 	 \param chance_at wartości szansy wylosowania akcji za dnia / w nocy
 	 \param longtype typ możliwej do wystapienia akcji długoterminowej.
 	 \param chance_long szansę wystąpienia akcji długoterminowej danego typu.
+	 \param nam nazwę akcji.
 	 */
 	action(int i, string nam, int stats_ad[4],int chance_at[2],string longtype,int chance_long)
 	{
@@ -87,10 +88,16 @@ class longaction : public action
 	int atime; //!< Zmienna określająca czas trwania akcji ðługoterminowej (w dniach).
 public:
 	//! Konstruktor klasy. 
-	/*!	Oprócz wartości nadawanych przez konstruktor klasy Action, nadaje:
-	 \param nam2 komunikat o tym, że akcja działa na człowieka.
+	/*!	nadaje:
+	\param stats_add wartości podstawowych statystyk do zwiększenia / zmniejszenia
+	 \param id wartość ID akcji długoterminowej
+	 \param chance_at_daytime dla [0] bazowy czas trwania akcji długoterminowej, dla [1] - niewykorzystane
+	 \param longterm_type typ możliwej do wystapienia kolejnej akcji długoterminowej.
+	 \param chance_of_longterm szansę wystąpienia kolejnej akcji długoterminowej danego typu.
+	 \param name komunikat o rozpoczęciu akcji długoterminowej.
+	 \param nam2 komunikat o tym, że akcja długoterminowa już jest aktywna.
 	 \param typ typ akcji długoterminowej.
-	 \param tim czas trwania akcji ðługoterminowej (w dniach).
+	 \param tim czas trwania akcji długoterminowej (w dniach).
 	 */
 	longaction(int id, string name, int stats_add[4], int chance_at_daytime[2], string longterm_type, int chance_of_longterm, string nam2, string typ, int tim)
 		: action(id,name,stats_add,chance_at_daytime,longterm_type,chance_of_longterm) 

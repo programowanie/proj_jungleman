@@ -61,7 +61,17 @@ void alive_announcement();
 	*/
 void get_me_some_action(vector<action>*natureActions,vector<action>*humanActions,vector<longaction>*longtermActions,string filename);
 
-
+//! Główna funkcja programu. 
+/*! Nadaje warunki początkowe (wywołuje konstruktory klas Człowiek i Natura, uzupełnia wektory akcjami z bazy danych),
+zawiera pętlę czynności które wykonuje człowiek w ciągu dnia. Pętla powtarza się 30 razy (30 dni).
+Funkcja main() zawiera też odwołania do funkcji wyświetlających informacje o zgonie / przeżyciu człowieka.
+Przyjmuje argumenty:
+\param argc określa liczbę argumentów
+\param argv kolejne argumenty:
+- nazwa pierwszej bazy danych (akcji)
+- nazwa drugiej bazy danych (akcji długoterminowych)
+- liczba określająca wartość początkową statystk Człowieka.
+*/
 int main(int argc, char const *argv[])
 {
 	srand( time( NULL ) );
@@ -136,7 +146,8 @@ for(int i=0;i<30;i++) //30 dni
 	Idler.learn(1); //codziennie troche mądrzejszy
 
 	if(i==29)alive_announcement();
-	usleep(3000000);
+	usleep(2000000);
+
 }
 	return 0;
 }

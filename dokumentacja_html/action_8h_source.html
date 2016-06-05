@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>projekt Jungleman: Plik źródłowy action.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="jungleman_logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">projekt Jungleman
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Strony</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">action.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="action_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classaction.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaction.html">action</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">int</span> id; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">/* Kolejno: health/water/food/rest*/</span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">int</span> stats_add[4]; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">/* Kolejno: za dnia / w nocy*/</span> </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">int</span> chance_at_daytime[2]; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">int</span> chance_of_longterm; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">string</span> longterm_type; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">string</span> name; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classaction.html#a33c35f83f9d400b32d6308c21f995a6f">   39</a></span>&#160;    <a class="code" href="classaction.html#a33c35f83f9d400b32d6308c21f995a6f">action</a>(<span class="keywordtype">int</span> i, <span class="keywordtype">string</span> nam, <span class="keywordtype">int</span> stats_ad[4],<span class="keywordtype">int</span> chance_at[2],<span class="keywordtype">string</span> longtype,<span class="keywordtype">int</span> chance_long)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">id</span>=i;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        name=nam;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        longterm_type=longtype;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        chance_of_longterm=chance_long;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;4;i++)stats_add[i]=stats_ad[i];</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;2;i++)chance_at_daytime[i]=chance_at[i];</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classaction.html#a207ba03b3fd62c9f4333d93a98c9939f">   51</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classaction.html#a207ba03b3fd62c9f4333d93a98c9939f">get_action_name</a>() {<span class="keywordflow">return</span> name;}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classaction.html#aab00a45fecf346aa728146f0ed01f08b">   54</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classaction.html#aab00a45fecf346aa728146f0ed01f08b">get_action_id</a>() {<span class="keywordflow">return</span> id;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classaction.html#a970845c32a5063a404204dd567b07a4f">   59</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classaction.html#a970845c32a5063a404204dd567b07a4f">get_action_stat_single</a>(<span class="keywordtype">int</span> a) {<span class="keywordflow">return</span> stats_add[a];}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classaction.html#aa6dafc16591018ec014e5aeb2eeed420">   64</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classaction.html#aa6dafc16591018ec014e5aeb2eeed420">get_action_chance_single</a>(<span class="keywordtype">int</span> a) {<span class="keywordflow">return</span> chance_at_daytime[a];}</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classaction.html#ad017990aaa75e81550633d0f6fbba487">   67</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classaction.html#ad017990aaa75e81550633d0f6fbba487">get_action_longterm_type</a>() {<span class="keywordflow">return</span> longterm_type;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classaction.html#af6eb8c760d5f92174cce3fa938563943">   70</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classaction.html#af6eb8c760d5f92174cce3fa938563943">get_longterm_chance</a>() {<span class="keywordflow">return</span> chance_of_longterm;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classaction.html#a19500e449aac2fa202e33feb40540e8e">   74</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classaction.html#a19500e449aac2fa202e33feb40540e8e">get_longterm_base_time</a>() {<span class="keywordflow">return</span> chance_at_daytime[1];}</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classlongaction.html">   83</a></span>&#160;<span class="keyword">class </span><a class="code" href="classlongaction.html">longaction</a> : <span class="keyword">public</span> <a class="code" href="classaction.html">action</a></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">string</span> name2; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">string</span> type;    </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">int</span> atime; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classlongaction.html#a22bd24fbc294ca1610deaaf144e7b74e">  102</a></span>&#160;    <a class="code" href="classlongaction.html#a22bd24fbc294ca1610deaaf144e7b74e">longaction</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">string</span> name, <span class="keywordtype">int</span> stats_add[4], <span class="keywordtype">int</span> chance_at_daytime[2], <span class="keywordtype">string</span> longterm_type, <span class="keywordtype">int</span> chance_of_longterm, <span class="keywordtype">string</span> nam2, <span class="keywordtype">string</span> typ, <span class="keywordtype">int</span> tim)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        : <a class="code" href="classaction.html">action</a>(id,name,stats_add,chance_at_daytime,longterm_type,chance_of_longterm) </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            name2=nam2;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            type=typ;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            atime=tim;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classlongaction.html#a8813daa038d3fad353803e575a0bcfee">  111</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classlongaction.html#a8813daa038d3fad353803e575a0bcfee">get_longaction_name2</a>() {<span class="keywordflow">return</span> name2;}</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="classlongaction.html#a5db27aa448f08bdc8513906d929682ef">  114</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classlongaction.html#a5db27aa448f08bdc8513906d929682ef">get_longaction_type</a>() {<span class="keywordflow">return</span> type;}</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="classlongaction.html#ae31e9b318c70b8b04c65c41b11700cec">  117</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classlongaction.html#ae31e9b318c70b8b04c65c41b11700cec">get_longaction_time</a>() {<span class="keywordflow">return</span> atime;}</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="classlongaction.html#a7404a6b0f40c02b29f7e193789d0c4d5">  123</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classlongaction.html#a7404a6b0f40c02b29f7e193789d0c4d5">time_is_running_out</a>(<span class="keywordtype">int</span> a) {atime-=a;}</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;};</div>
+<div class="ttc" id="classaction_html_a970845c32a5063a404204dd567b07a4f"><div class="ttname"><a href="classaction.html#a970845c32a5063a404204dd567b07a4f">action::get_action_stat_single</a></div><div class="ttdeci">int get_action_stat_single(int a)</div><div class="ttdoc">Funkcja-getter, zwraca wartość zwiększenia odpowiedniej statystyki człowieka. </div><div class="ttdef"><b>Definition:</b> action.h:59</div></div>
+<div class="ttc" id="classaction_html"><div class="ttname"><a href="classaction.html">action</a></div><div class="ttdoc">Klasa Akcja. </div><div class="ttdef"><b>Definition:</b> action.h:13</div></div>
+<div class="ttc" id="classlongaction_html_a22bd24fbc294ca1610deaaf144e7b74e"><div class="ttname"><a href="classlongaction.html#a22bd24fbc294ca1610deaaf144e7b74e">longaction::longaction</a></div><div class="ttdeci">longaction(int id, string name, int stats_add[4], int chance_at_daytime[2], string longterm_type, int chance_of_longterm, string nam2, string typ, int tim)</div><div class="ttdoc">Konstruktor klasy. </div><div class="ttdef"><b>Definition:</b> action.h:102</div></div>
+<div class="ttc" id="classlongaction_html_a5db27aa448f08bdc8513906d929682ef"><div class="ttname"><a href="classlongaction.html#a5db27aa448f08bdc8513906d929682ef">longaction::get_longaction_type</a></div><div class="ttdeci">string get_longaction_type()</div><div class="ttdoc">Funkcja-getter, zwraca typ akcji długoterminowej. </div><div class="ttdef"><b>Definition:</b> action.h:114</div></div>
+<div class="ttc" id="classlongaction_html_a7404a6b0f40c02b29f7e193789d0c4d5"><div class="ttname"><a href="classlongaction.html#a7404a6b0f40c02b29f7e193789d0c4d5">longaction::time_is_running_out</a></div><div class="ttdeci">void time_is_running_out(int a)</div><div class="ttdoc">Funkcja zmniejszająca czas pozostały do końca trwania akcji długoterminowej. </div><div class="ttdef"><b>Definition:</b> action.h:123</div></div>
+<div class="ttc" id="classlongaction_html_a8813daa038d3fad353803e575a0bcfee"><div class="ttname"><a href="classlongaction.html#a8813daa038d3fad353803e575a0bcfee">longaction::get_longaction_name2</a></div><div class="ttdeci">string get_longaction_name2()</div><div class="ttdoc">Funkcja-getter, zwraca 2 komunikat akcji długoterminowej. </div><div class="ttdef"><b>Definition:</b> action.h:111</div></div>
+<div class="ttc" id="classlongaction_html"><div class="ttname"><a href="classlongaction.html">longaction</a></div><div class="ttdoc">Klasa Akcja Długoterminowa. </div><div class="ttdef"><b>Definition:</b> action.h:83</div></div>
+<div class="ttc" id="classlongaction_html_ae31e9b318c70b8b04c65c41b11700cec"><div class="ttname"><a href="classlongaction.html#ae31e9b318c70b8b04c65c41b11700cec">longaction::get_longaction_time</a></div><div class="ttdeci">int get_longaction_time()</div><div class="ttdoc">Funkcja-getter, zwraca długość trwania akcji długoterminową. </div><div class="ttdef"><b>Definition:</b> action.h:117</div></div>
+<div class="ttc" id="classaction_html_ad017990aaa75e81550633d0f6fbba487"><div class="ttname"><a href="classaction.html#ad017990aaa75e81550633d0f6fbba487">action::get_action_longterm_type</a></div><div class="ttdeci">string get_action_longterm_type()</div><div class="ttdoc">Funkcja-getter, zwraca typ możliwej akcji długoterminowej. </div><div class="ttdef"><b>Definition:</b> action.h:67</div></div>
+<div class="ttc" id="classaction_html_aab00a45fecf346aa728146f0ed01f08b"><div class="ttname"><a href="classaction.html#aab00a45fecf346aa728146f0ed01f08b">action::get_action_id</a></div><div class="ttdeci">int get_action_id()</div><div class="ttdoc">Funkcja-getter, zwraca ID akcji. </div><div class="ttdef"><b>Definition:</b> action.h:54</div></div>
+<div class="ttc" id="classaction_html_a19500e449aac2fa202e33feb40540e8e"><div class="ttname"><a href="classaction.html#a19500e449aac2fa202e33feb40540e8e">action::get_longterm_base_time</a></div><div class="ttdeci">int get_longterm_base_time()</div><div class="ttdoc">Dla Klasy pochodnej- akcji długoterminowej zwraca jej CZAS BAZOWY. </div><div class="ttdef"><b>Definition:</b> action.h:74</div></div>
+<div class="ttc" id="classaction_html_a207ba03b3fd62c9f4333d93a98c9939f"><div class="ttname"><a href="classaction.html#a207ba03b3fd62c9f4333d93a98c9939f">action::get_action_name</a></div><div class="ttdeci">string get_action_name()</div><div class="ttdoc">Funkcja-getter, zwraca nazwę akcji. </div><div class="ttdef"><b>Definition:</b> action.h:51</div></div>
+<div class="ttc" id="classaction_html_a33c35f83f9d400b32d6308c21f995a6f"><div class="ttname"><a href="classaction.html#a33c35f83f9d400b32d6308c21f995a6f">action::action</a></div><div class="ttdeci">action(int i, string nam, int stats_ad[4], int chance_at[2], string longtype, int chance_long)</div><div class="ttdoc">Konstruktor klasy. </div><div class="ttdef"><b>Definition:</b> action.h:39</div></div>
+<div class="ttc" id="classaction_html_aa6dafc16591018ec014e5aeb2eeed420"><div class="ttname"><a href="classaction.html#aa6dafc16591018ec014e5aeb2eeed420">action::get_action_chance_single</a></div><div class="ttdeci">int get_action_chance_single(int a)</div><div class="ttdoc">Funkcja-getter, zwraca szansę wystąpienia akcji. </div><div class="ttdef"><b>Definition:</b> action.h:64</div></div>
+<div class="ttc" id="classaction_html_af6eb8c760d5f92174cce3fa938563943"><div class="ttname"><a href="classaction.html#af6eb8c760d5f92174cce3fa938563943">action::get_longterm_chance</a></div><div class="ttdeci">int get_longterm_chance()</div><div class="ttdoc">Funkcja-getter, zwraca sznasę na akcję długoterminową. </div><div class="ttdef"><b>Definition:</b> action.h:70</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano N, 5 cze 2016 19:39:52 dla projekt Jungleman programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

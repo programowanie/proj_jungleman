@@ -1,0 +1,8 @@
+<map id="action.h" name="action.h">
+<area shape="rect" id="node2" href="$human_8h.html" title="Biblioteka dodająca klasę Człowiek. " alt="" coords="84,80,156,107"/>
+<area shape="rect" id="node3" href="$algorithms_8cpp.html" title="Plik zawierający funkcje poboczne, wykorzystywane w pliku main.cpp. " alt="" coords="116,155,223,181"/>
+<area shape="rect" id="node4" href="$human_8cpp.html" title="Plik zawierający metody z klasy Człowiek. " alt="" coords="5,155,91,181"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title="Główny plik wykonywalny. " alt="" coords="247,155,320,181"/>
+<area shape="rect" id="node6" href="$nature_8h.html" title="Biblioteka dodająca klasę Natura. " alt="" coords="281,80,351,107"/>
+<area shape="rect" id="node7" href="$nature_8cpp.html" title="Plik zawierający metody z klasy Natura. " alt="" coords="345,155,427,181"/>
+</map>

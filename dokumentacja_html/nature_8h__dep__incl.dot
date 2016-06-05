@@ -1,0 +1,12 @@
+digraph "nature.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="nature.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="algorithms.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$algorithms_8cpp.html",tooltip="Plik zawierający funkcje poboczne, wykorzystywane w pliku main.cpp. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html",tooltip="Główny plik wykonywalny. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="nature.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$nature_8cpp.html",tooltip="Plik zawierający metody z klasy Natura. "];
+}

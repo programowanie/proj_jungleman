@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>projekt Jungleman: Plik źródłowy nature.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="jungleman_logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">projekt Jungleman
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Strony</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">nature.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="nature_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;<a class="code" href="action_8h.html">action.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;ctime&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classnature.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classnature.html">nature</a> <span class="comment">//singleton</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">static</span> <a class="code" href="classnature.html">nature</a> *jungl;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classnature.html">nature</a>() </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    {};</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">int</span> daytime; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">bool</span> afternoon; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">int</span> safe_place; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">string</span> killer; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    vector&lt;action&gt; jungle_response; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    vector&lt;longaction&gt; long_term_conditions; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">static</span> <a class="code" href="classnature.html">nature</a> *jungle();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="classaction.html">action</a>* random_nature_response(); </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> set(<span class="keywordtype">int</span> day,<span class="keywordtype">bool</span> anoon,<span class="keywordtype">int</span> place);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classnature.html#a4ed3e9fdeb24817c252aa6a2a1480f63">   49</a></span>&#160;    vector&lt;action&gt;* <a class="code" href="classnature.html#a4ed3e9fdeb24817c252aa6a2a1480f63">set_jungle_response</a>() {<span class="keywordflow">return</span> &amp;jungle_response;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classnature.html#ac967b4b21c5f2b42ddb55817b78a6e78">   52</a></span>&#160;    vector&lt;longaction&gt;* <a class="code" href="classnature.html#ac967b4b21c5f2b42ddb55817b78a6e78">set_long_term_conditions</a>() {<span class="keywordflow">return</span> &amp;long_term_conditions;}</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classnature.html#af3ed32bbaf467fcd97d81ccddb2de241">   55</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classnature.html#af3ed32bbaf467fcd97d81ccddb2de241">get_daytime</a>() {<span class="keywordflow">return</span> daytime;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classnature.html#a5469286036d83c0bc6fdb979bf729bd1">   58</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classnature.html#a5469286036d83c0bc6fdb979bf729bd1">get_afternoon</a>() {<span class="keywordflow">return</span> afternoon;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classnature.html#a1072f71b23cad7cc0255a2801318c92b">   61</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classnature.html#a1072f71b23cad7cc0255a2801318c92b">get_safe_place</a>() {<span class="keywordflow">return</span> safe_place;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classnature.html#a565930a41c6d868c812622f52828bf17">   64</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classnature.html#a565930a41c6d868c812622f52828bf17">get_killer</a>() {<span class="keywordflow">return</span> killer;}</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="classlongaction.html">longaction</a> get_longaction(<a class="code" href="classaction.html">action</a>* last);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="ttc" id="classaction_html"><div class="ttname"><a href="classaction.html">action</a></div><div class="ttdoc">Klasa Akcja. </div><div class="ttdef"><b>Definition:</b> action.h:13</div></div>
+<div class="ttc" id="classnature_html_a565930a41c6d868c812622f52828bf17"><div class="ttname"><a href="classnature.html#a565930a41c6d868c812622f52828bf17">nature::get_killer</a></div><div class="ttdeci">string get_killer()</div><div class="ttdoc">Funkcja-getter, zwraca nazwę ostatniej akcji natury. </div><div class="ttdef"><b>Definition:</b> nature.h:64</div></div>
+<div class="ttc" id="classnature_html"><div class="ttname"><a href="classnature.html">nature</a></div><div class="ttdoc">Klasa Natura (singleton) </div><div class="ttdef"><b>Definition:</b> nature.h:16</div></div>
+<div class="ttc" id="classlongaction_html"><div class="ttname"><a href="classlongaction.html">longaction</a></div><div class="ttdoc">Klasa Akcja Długoterminowa. </div><div class="ttdef"><b>Definition:</b> action.h:83</div></div>
+<div class="ttc" id="action_8h_html"><div class="ttname"><a href="action_8h.html">action.h</a></div><div class="ttdoc">Biblioteka dodająca klasę Akcja i klasę Akcja Długoterminowa. </div></div>
+<div class="ttc" id="classnature_html_af3ed32bbaf467fcd97d81ccddb2de241"><div class="ttname"><a href="classnature.html#af3ed32bbaf467fcd97d81ccddb2de241">nature::get_daytime</a></div><div class="ttdeci">int get_daytime()</div><div class="ttdoc">Funkcja-getter, zwraca porę dnia 1. </div><div class="ttdef"><b>Definition:</b> nature.h:55</div></div>
+<div class="ttc" id="classnature_html_a4ed3e9fdeb24817c252aa6a2a1480f63"><div class="ttname"><a href="classnature.html#a4ed3e9fdeb24817c252aa6a2a1480f63">nature::set_jungle_response</a></div><div class="ttdeci">vector&lt; action &gt; * set_jungle_response()</div><div class="ttdoc">Funkcja do załadowania wektora akcji, zwraca na niego wskaźnik. </div><div class="ttdef"><b>Definition:</b> nature.h:49</div></div>
+<div class="ttc" id="classnature_html_a1072f71b23cad7cc0255a2801318c92b"><div class="ttname"><a href="classnature.html#a1072f71b23cad7cc0255a2801318c92b">nature::get_safe_place</a></div><div class="ttdeci">int get_safe_place()</div><div class="ttdoc">Funkcja-getter, zwraca info czy aktualne miejsce jest bezpieczne. </div><div class="ttdef"><b>Definition:</b> nature.h:61</div></div>
+<div class="ttc" id="classnature_html_a5469286036d83c0bc6fdb979bf729bd1"><div class="ttname"><a href="classnature.html#a5469286036d83c0bc6fdb979bf729bd1">nature::get_afternoon</a></div><div class="ttdeci">bool get_afternoon()</div><div class="ttdoc">Funkcja-getter, zwraca porę dnia 2. </div><div class="ttdef"><b>Definition:</b> nature.h:58</div></div>
+<div class="ttc" id="classnature_html_ac967b4b21c5f2b42ddb55817b78a6e78"><div class="ttname"><a href="classnature.html#ac967b4b21c5f2b42ddb55817b78a6e78">nature::set_long_term_conditions</a></div><div class="ttdeci">vector&lt; longaction &gt; * set_long_term_conditions()</div><div class="ttdoc">Funkcja do załadowania wektora akcji długoterminowych, zwraca na niego wskaźnik. </div><div class="ttdef"><b>Definition:</b> nature.h:52</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano N, 5 cze 2016 19:39:52 dla projekt Jungleman programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

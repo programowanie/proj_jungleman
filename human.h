@@ -54,14 +54,14 @@ public:
 	/*! Przyjmuje parametry:
 	\param daytime porę dnia
 	\param chosen_action konkretną akcja którą wykonuje człowiek
-	\param safe_place czy znajduje się w bezpiecznym miejscu
+	\param safeplace czy znajduje się w bezpiecznym miejscu
 	\param nature_response konkretną reakcję natury
 	*/
 	bool do_something(int daytime, action* chosen_action, bool safeplace,action* nature_response);
 
 	//! Funkcja dodająca akcję długoterminową do wektora takich akcji działających na człowieka.
 	/*! Przyjmuje parametry:
-	\param long_aciton wybraną akcję długoterminową
+	\param long_action wybraną akcję długoterminową
 	*/
 	void effect_cause(longaction long_action);
 

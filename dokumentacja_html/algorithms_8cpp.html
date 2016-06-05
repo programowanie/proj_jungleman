@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>projekt Jungleman: Dokumentacja pliku algorithms.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="jungleman_logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">projekt Jungleman
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Strony</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funkcje</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja pliku algorithms.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Plik zawierający funkcje poboczne, wykorzystywane w pliku <a class="el" href="main_8cpp.html" title="Główny plik wykonywalny. ">main.cpp</a>.  
+<a href="#details">Więcej...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="human_8h_source.html">human.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="action_8h_source.html">action.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="nature_8h_source.html">nature.h</a>&quot;</code><br/>
+<code>#include &lt;stdio.h&gt;</code><br/>
+<code>#include &lt;iostream&gt;</code><br/>
+<code>#include &lt;stdlib.h&gt;</code><br/>
+<code>#include &lt;vector&gt;</code><br/>
+<code>#include &lt;fstream&gt;</code><br/>
+<code>#include &lt;sstream&gt;</code><br/>
+<code>#include &lt;ctime&gt;</code><br/>
+<code>#include &lt;unistd.h&gt;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Wykres zależności załączania dla algorithms.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="algorithms_8cpp__incl.png" border="0" usemap="#algorithms_8cpp" alt=""/></div>
+<map name="algorithms_8cpp" id="algorithms_8cpp">
+<area shape="rect" id="node2" href="human_8h.html" title="Biblioteka dodająca klasę Człowiek. " alt="" coords="80,80,152,107"/><area shape="rect" id="node3" href="action_8h.html" title="Biblioteka dodająca klasę Akcja i klasę Akcja Długoterminowa. " alt="" coords="155,155,223,181"/><area shape="rect" id="node8" href="nature_8h.html" title="Biblioteka dodająca klasę Natura. " alt="" coords="328,80,397,107"/></map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:a7f7e17b17fc92984489ced60a6ea18d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="algorithms_8cpp.html#a7f7e17b17fc92984489ced60a6ea18d6">death_announcement</a> (int day, int daytime, string killername, string <a class="el" href="classaction.html">action</a>)</td></tr>
+<tr class="memdesc:a7f7e17b17fc92984489ced60a6ea18d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja wyświetlająca raport o śmierci.  <a href="#a7f7e17b17fc92984489ced60a6ea18d6">Więcej...</a><br/></td></tr>
+<tr class="separator:a7f7e17b17fc92984489ced60a6ea18d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab7476411c19fe58802f3ee3f754a7c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="algorithms_8cpp.html#aab7476411c19fe58802f3ee3f754a7c2">alive_announcement</a> ()</td></tr>
+<tr class="memdesc:aab7476411c19fe58802f3ee3f754a7c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja wyświetlająca informację o przetrwaniu człowieka.  <a href="#aab7476411c19fe58802f3ee3f754a7c2">Więcej...</a><br/></td></tr>
+<tr class="separator:aab7476411c19fe58802f3ee3f754a7c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f40dd86f611fa345ee8e1b89bf3814d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="algorithms_8cpp.html#a4f40dd86f611fa345ee8e1b89bf3814d">get_me_some_action</a> (vector&lt; <a class="el" href="classaction.html">action</a> &gt; *NATURE, vector&lt; <a class="el" href="classaction.html">action</a> &gt; *HUMAN, vector&lt; <a class="el" href="classlongaction.html">longaction</a> &gt; *Longterm, string filename)</td></tr>
+<tr class="memdesc:a4f40dd86f611fa345ee8e1b89bf3814d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja która ładuje wektory akcji i akcji długoterminowych dla Natury i Człowieka.  <a href="#a4f40dd86f611fa345ee8e1b89bf3814d">Więcej...</a><br/></td></tr>
+<tr class="separator:a4f40dd86f611fa345ee8e1b89bf3814d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Plik zawierający funkcje poboczne, wykorzystywane w pliku <a class="el" href="main_8cpp.html" title="Główny plik wykonywalny. ">main.cpp</a>. </p>
+</div><h2 class="groupheader">Dokumentacja funkcji</h2>
+<a class="anchor" id="aab7476411c19fe58802f3ee3f754a7c2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alive_announcement </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcja wyświetlająca informację o przetrwaniu człowieka. </p>
+<p>Tylko jeśli przeżyje 30 dni. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7f7e17b17fc92984489ced60a6ea18d6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void death_announcement </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>day</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>daytime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>killer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>action</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcja wyświetlająca raport o śmierci. </p>
+<p>Tylko jeśli zginie. Przyjmuje parametry: </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">day</td><td>numer dnia </td></tr>
+    <tr><td class="paramname">daytime</td><td>porę dnia </td></tr>
+    <tr><td class="paramname">killer</td><td>ostatnią reakcję natury </td></tr>
+    <tr><td class="paramname">action</td><td>ostatnią akcję człowieka. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4f40dd86f611fa345ee8e1b89bf3814d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void get_me_some_action </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; <a class="el" href="classaction.html">action</a> &gt; *&#160;</td>
+          <td class="paramname"><em>natureActions</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; <a class="el" href="classaction.html">action</a> &gt; *&#160;</td>
+          <td class="paramname"><em>humanActions</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; <a class="el" href="classlongaction.html">longaction</a> &gt; *&#160;</td>
+          <td class="paramname"><em>longtermActions</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcja która ładuje wektory akcji i akcji długoterminowych dla Natury i Człowieka. </p>
+<p>Przyjmuje parametry: </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">natureActions</td><td>wskaźnik na wektor akcji natury </td></tr>
+    <tr><td class="paramname">humanActions</td><td>wskaźnik na wektor akcji człowieka </td></tr>
+    <tr><td class="paramname">longtermActions</td><td>wskaźnik na wektor akcji długoterminowych natury </td></tr>
+    <tr><td class="paramname">filename</td><td>nazwa pliku z bazą danych. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano N, 5 cze 2016 19:39:52 dla projekt Jungleman programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>
